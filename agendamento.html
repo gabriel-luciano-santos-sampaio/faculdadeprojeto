@@ -1,0 +1,74 @@
+<!doctype html> <!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português -->
+<head>
+    <meta charset="utf-8"> <!-- Define a codificação de caracteres como UTF-8, padrão para sites modernos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a largura da página para ser responsiva em dispositivos móveis -->
+    <title>Ultra Imagem</title> <!-- Título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo que estiliza a página -->
+</head>
+<body> <!-- Início do corpo da página -->
+
+    <!-- Barra de navegação superior -->
+    <nav class="topnav"> <!-- Elemento de navegação com a classe 'topnav' para aplicar estilos -->
+        <div class="container"> <!-- Container flexível que alinha os itens da barra de navegação -->
+            <a href="pagina_inicial.html" class="logo"> <!-- Link para a página inicial, com a classe 'logo' -->
+                <img src="img/navultraimg.png" width="160" height="40" alt="Imagem da Ultra Imagem"> <!-- Logo da empresa Ultra Imagem -->
+            </a>
+            <ul class="nav-links"> <!-- Lista de links de navegação -->
+                <li><a href="agendamento.html">Agendamento</a></li> <!-- Link para a página de Agendamento -->
+                <li><a href="local.html">Localização</a></li> <!-- Link para a seção de Localização -->
+                <li><a href="sobre.html">Sobre</a></li> <!-- Link para a seção de Sobre-->
+                <li><a href="pagina_inicial.html">Início</a></li> <!-- Link para a seção de Início-->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main id="main"> <!-- Tag principal que contém o conteúdo central da página -->
+        <section class="form-section"> <!-- Seção que contém o formulário de agendamento, com a classe 'form-section' -->
+            <h2>Agendamento de Consulta</h2> <!-- Título da seção de agendamento -->
+            
+            <!-- Formulário de agendamento -->
+            <form action="" id="formAgendamento"> <!-- Início do formulário, com o atributo 'id' para identificação -->
+                <div class="form-group"> <!-- Grupo de entrada do formulário -->
+                    <label for="nome">Nome Completo:</label> <!-- Rótulo para o campo Nome Completo -->
+                    <input type="text" id="nome" placeholder="Digite seu nome" required> <!-- Campo de texto para o nome -->
+                </div>
+                <div class="form-group"> <!-- Outro grupo de entrada -->
+                    <label for="cpf">CPF:</label> <!-- Rótulo para o campo CPF -->
+                    <input type="text" id="cpf" placeholder="Digite seu CPF" required> <!-- Campo de texto para CPF -->
+                </div>
+
+                <div class="form-group"> <!-- Outro grupo de entrada -->
+                    <label for="num">Número:</label> <!-- Rótulo para o campo Número -->
+                    <input type="text" id="num" placeholder="Digite seu CPF" required> <!-- Campo de texto para Numero -->
+                </div>
+                
+                <!-- Seção para seleção de gênero -->
+                <div class="form-group">
+                    <label>Seu gênero:</label> <!-- Rótulo para a seleção de gênero -->
+                    <label><input type="radio" id="homem" name="genero" value="homem"> Homem</label> <!-- Opção gênero masculino -->
+                    <label><input type="radio" id="mulher" name="genero" value="mulher"> Mulher</label> <!-- Opção gênero feminino -->
+                </div>
+                <label>Selecione o exame</a>
+                    <select name="exame" required="required">
+                        <option value="exame1">Ultrassom Abdômen</option>
+                        <option value="exam2">Ultrassom Obstétrico</option>
+                        <option value="exam3">Ultrassom Doppler</option>
+                        <option value="exam4">Ultrassom de Tireóide</option>
+                    </select>
+                    <br>
+                    <br>
+                <!-- Botão de envio do formulário -->
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn-submit"> <!-- Botão de envio -->   
+                </div>
+            </form>
+        </section>
+    </main>
+<!-- Whatsapp -->
+<a href="http://api.whatsapp.com/send?1=pt_BR&phone=5521994623778" id="link" style="margin-left:94%;">
+    <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-icon-png-image_6315990.png" id="whats-icon" >
+  </a>
+</body>
+</html>
