@@ -1,245 +1,311 @@
-/* Reset padrão para remover margens e paddings */
+/* Reset padrão */
 * {
-    margin: 0; /* Remove margem padrão de todos os elementos */
-    padding: 0; /* Remove padding padrão de todos os elementos */
-    box-sizing: border-box; /* Garante que o padding e a borda não aumentem o tamanho do elemento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilos do corpo */
+/* Corpo */
 body {
-    font-family: 'Arial', sans-serif; /* Define a fonte padrão como Arial */
-    background-color: #f4f4f9; /* Define a cor de fundo da página como um cinza claro */
-    color: #333; /* Define a cor do texto como cinza escuro */
-    line-height: 1.6; /* Define a altura da linha para melhorar a legibilidade */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh; /* Define altura mínima da tela */
+    display: flex;
+    flex-direction: column;
+}
+section {
+    flex: 1;
 }
 
 /* Barra de navegação */
 .topnav {
-    background-color: #004080; /* Define a cor de fundo da barra de navegação como azul escuro */
-    padding: 1rem 0; /* Adiciona espaçamento acima e abaixo da barra de navegação */
-}
-
-.topnav .container {
-    max-width: 1200px; /* Define a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    display: flex; /* Usa o Flexbox para alinhar os itens */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-items: center; /* Alinha verticalmente os itens no centro */
-}
-
-.topnav .logo img {
-    width: 190px; /* Define a largura da logo */
-    height: 55px; /* Define a altura da logo */
-}
-
-.nav-links {
-    list-style: none; /* Remove as bolinhas da lista */
-    display: flex; /* Usa Flexbox para alinhar os links em linha */
-    gap: 20px; /* Adiciona espaçamento entre os links */
-}
-
-.nav-links li {
-    display: inline; /* Define os itens da lista como inline */
-}
-
-.nav-links a {
-    color: #fff; /* Define a cor do texto dos links como branca */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    padding: 10px 20px; /* Adiciona espaçamento interno ao redor dos links */
-    border-radius: 5px; /* Define bordas arredondadas */
-    transition: background-color 0.3s ease; /* Anima a mudança de cor ao passar o mouse */
-}
-
-.nav-links a:hover {
-    background-color: #0070c0; /* Muda a cor de fundo do link ao passar o mouse */
-}
-
-/* Estilos do conteúdo principal */
-#main {
-    padding: 20px; /* Adiciona espaçamento ao redor do conteúdo principal */
-    max-width: 1200px; /* Define a largura máxima do conteúdo */
-    margin: 20px auto; /* Centraliza o conteúdo na página */
-}
-
-/* Estilos da seção de formulário */
-.form-section {
-    background-color: #fff; /* Define o fundo como branco */
-    padding: 40px; /* Adiciona espaçamento ao redor do formulário */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-}
-
-.form-section h2 {
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
-    color: #004080; /* Cor azul escuro para o título */
-}
-
-/* Estilos do formulário */
-.form-group {
-    margin-bottom: 20px; /* Espaço entre os grupos de campos do formulário */
-}
-
-.form-group label {
-    display: block; /* Exibe o rótulo como um bloco */
-    margin-bottom: 8px; /* Espaço abaixo do rótulo */
-    font-weight: bold; /* Texto em negrito */
-    color: #004080; /* Cor azul escuro para os rótulos */
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"] {
-    width: 100%; /* Campos de entrada ocupam toda a largura */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 4px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte */
-}
-
-.form-group input[type="radio"] {
-    margin-right: 10px; /* Espaçamento à direita dos botões de rádio */
-}
-
-.btn-submit {
-    display: block; /* O botão ocupa uma linha inteira */
-    width: 100%; /* O botão ocupa toda a largura do seu contêiner */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #0070c0; /* Cor de fundo azul para o botão */
-    color: #fff; /* Cor do texto do botão como branco */
-    border: none; /* Remove a borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
-    font-size: 18px; /* Tamanho da fonte do botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.3s ease; /* Anima a mudança de cor ao passar o mouse */
-}
-
-.btn-submit:hover {
-    background-color: #005fa3; /* Muda a cor de fundo do botão ao passar o mouse */
-}
-.welcome-section {
-    padding: 40px; /* Espaçamento interno da seção de boas-vindas */
-    background-color: #f9f9f9; /* Fundo cinza claro */
-    text-align: center; /* Centraliza o texto */
-    border-radius: 8px; /* Bordas arredondadas */
-    margin: 20px auto; /* Centraliza a seção */
-    max-width: 800px; /* Largura máxima da seção */
-}
-
-.welcome-section h1 {
-    color: #004080; /* Cor azul escuro para o título */
-}
-
-.btn-link {
-    display: inline-block; /* Permite que o botão tenha padding */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    background-color: #0070c0; /* Cor de fundo azul para o botão */
-    color: #fff; /* Cor do texto do botão como branco */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado do link */
-    transition: background-color 0.3s ease; /* Anima a mudança de cor ao passar o mouse */
-}
-
-.btn-link:hover {
-    background-color: #005fa3; /* Muda a cor de fundo do botão ao passar o mouse */
-}
-
-.about-section {
-    padding: 40px; /* Espaçamento interno da seção */
-    background-color: #fff; /* Fundo branco */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 1200px; /* Largura máxima da seção */
-    margin: 20px auto; /* Centraliza a seção */
-}
-
-.team-members {
-    display: flex; /* Alinha os membros em linha */
-    justify-content: space-between; /* Espaço uniforme entre os membros */
-    flex-wrap: wrap; /* Permite que os membros quebrem linha em telas menores */
-}
-
-.member {
-    flex: 1; /* Cada membro ocupa espaço igual */
-    min-width: 220px; /* Largura mínima para cada membro */
-    background-color: #f9f9f9; /* Fundo cinza claro */
-    margin: 10px; /* Espaço entre os membros */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    text-align: center; /* Centraliza o texto */
-}
-
-.member h3 {
-    color: #004080; /* Cor azul escuro para os nomes */
-    margin-bottom: 10px; /* Espaço abaixo do nome */
-}
-
-#whats-icon{
-
-    position: sticky;
-    top:0;
-    float: right;
-    z-index: 10;
-    height: 60px;
-    width: 60px;
-    margin-right: 15px;
-    margin-top:15px;
-    margin-bottom: 0px;
-  }
-#whats-icon:hover{
-    transition: 0.5;
-    border: 1px solid white;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 80px;
-   }
-.gmaps {
-    text-align: center;
-}
-.endereco {
-    text-align: center;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
     background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 1rem 0;
 }
-
-main {
-    padding: 20px;
+.topnav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.introduction, .services {
-    background: white;
+.topnav .logo img {
+    width: 190px;
+    height: 55px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    padding: 15px;
-    margin: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: #0070c0;
 }
 
-h2 {
+.active {
+    background-color: #0070c0;
+}
+
+/* Conteúdo principal */
+#main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+/* Formulário */
+.form-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
     color: #004080;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Inputs de texto e select */
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
+/* Estilo específico para o select */
+.form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f9f9f9;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="none" stroke="%23333" stroke-width=".75" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+}
+
+/* Inputs de radio: corrigido */
+.form-group input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Mantém o alinhamento ao lado do texto */
+}
+
+/* Botões */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #0070c0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: #005fa3;
+}
+/* Seção de Boas-Vindas */
+.welcome-section {
+    background-color: #004080;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #0070c0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #005fa3;
+}
+
+/* Seção sobre Ultrassonografia */
+.introduction {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.introduction h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Seção de Serviços */
+.services {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.services ul {
+    list-style-type: none;
+}
+.services ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+/* Seção sobre */
+.about-section, .services {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Membros da equipe */
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.member {
+    flex: 1;
+    min-width: 220px;
+    background-color: #f9f9f9;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.member h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.gmaps {
+    width: 100%; /* O iframe ocupará 80% da largura da tela */
+    height: 0;
+    padding-bottom: 45%; /* Proporção de altura para manter a tela responsiva */
+    position: relative;
+    margin: 0 auto; /* Centraliza horizontalmente o iframe */
+}
+
+.gmaps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.endereco {
+    text-align: center;
+}
+
+/* Rodapé */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: auto;
+}
+.ultrasound-image {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Ícone de calendário padrão */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Quando o input é focado */
+input[type="date"]:focus {
+    border-color: #0070c0;
+    outline: none;
+}
+
+/* Personalizando placeholder */
+input[type="date"]::placeholder {
+    color: #aaa;
 }
