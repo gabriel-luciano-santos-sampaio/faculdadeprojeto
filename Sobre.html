@@ -1,53 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nós - Ultra Imagem</title>
-    <link rel="stylesheet" href="style.css"> <!-- Reutiliza o mesmo arquivo CSS -->
-</head>
-<body>
-    <!-- Barra de navegação superior -->
-    <nav class="topnav"> <!-- Elemento de navegação com a classe 'topnav' para aplicar estilos -->
-        <div class="container"> <!-- Container flexível que alinha os itens da barra de navegação -->
-            <a href="inicio.html" class="logo"> <!-- Link para a página inicial, com a classe 'logo' -->
-                <img src="img/navultraimg.png" width="160" height="40" alt="Imagem da Ultra Imagem"> <!-- Logo da empresa Ultra Imagem -->
-            </a>
-            <ul class="nav-links"> <!-- Lista de links de navegação -->
-                <li><a href="agendamento.html">Agendamento</a></li>
-                <li><a href="local.html">Localização</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="pagina_inicial.html">Início</a></li>
-            </ul>
-        </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Barra de navegação -->
+    <nav class="topnav">
+      <div class="container">
+        <a href="inicio.html" class="logo">
+          <img
+            src="img/navultraimg.png"
+            width="160"
+            height="40"
+            alt="Imagem da Ultra Imagem"
+          />
+        </a>
+        <ul class="nav-links">
+          <li><a href="pagina_inicial.html">Início</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+          <li><a href="local.html">Localização</a></li>
+          <li><a href="sobre.html" class="active">Sobre</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <main id="main"> <!-- Início do conteúdo principal da página -->
-        <section class="about-section"> <!-- Seção dedicada a informações sobre a equipe -->
-            <h2>Sobre Nós</h2> <!-- Título da seção -->
-            <p>Bem-vindo à Ultra Imagem, onde nossa equipe dedicada está comprometida em fornecer serviços de ultrassonografia de alta qualidade. Conheça nossos integrantes abaixo:</p>
-            <div class="team-members"> <!-- Container para os membros da equipe -->
-                <div class="member"> <!-- Div para um membro da equipe -->
-                    <h3>Gabriel Luciano</h3> <!-- Nome do integrante -->
-                    <p>Função: Exemplo de função do integrante.</p> <!-- Descrição da função do integrante -->
-                </div>
-                <div class="member"> <!-- Div para um membro da equipe -->
-                    <h3>Caio Butkousky</h3> <!-- Nome do integrante -->
-                    <p>Função: Exemplo de função do integrante.</p> <!-- Descrição da função do integrante -->
-                </div>
-                <div class="member"> <!-- Div para um membro da equipe -->
-                    <h3>Ruan Fernandes</h3> <!-- Nome do integrante -->
-                    <p>Função: Exemplo de função do integrante.</p> <!-- Descrição da função do integrante -->
-                </div>
-                <div class="member"> <!-- Div para um membro da equipe -->
-                    <h3>João Torquato</h3> <!-- Nome do integrante -->
-                    <p>Função: Exemplo de função do integrante.</p> <!-- Descrição da função do integrante -->
-                </div>
-            </div>
-        </section>
+    <!-- Conteúdo principal -->
+    <main id="main">
+      <section class="about-section">
+        <h2>Sobre Nós</h2>
+        <p>
+          Bem-vindo à Ultra Imagem, onde nossa equipe dedicada está comprometida
+          em fornecer serviços de ultrassonografia de alta qualidade. Conheça
+          nossos integrantes abaixo:
+        </p>
+        <!-- Membros da equipe -->
+        <div class="team-members">
+          <div class="member">
+            <h3>Gabriel Luciano</h3>
+            <p>Função: Exemplo de função do integrante.</p>
+          </div>
+          <div class="member">
+            <h3>Caio Butkousky</h3>
+            <p>Função: Exemplo de função do integrante.</p>
+          </div>
+          <div class="member">
+            <h3>Ruan Fernandes</h3>
+            <p>Função: Exemplo de função do integrante.</p>
+          </div>
+          <div class="member">
+            <h3>João Torquato</h3>
+            <p>Função: Exemplo de função do integrante.</p>
+          </div>
+        </div>
+      </section>
     </main>
-    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5521994623778" id="link" style="margin-left:94%;">
-        <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-icon-png-image_6315990.png" id="whats-icon" >
-      </a>
-</body>
+
+    <!-- Link do WhatsApp -->
+    <a href="https://wa.me/5521994623778" target="_blank" class="whatsapp-link">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+        alt="WhatsApp"
+      />
+    </a>
+  </body>
 </html>
