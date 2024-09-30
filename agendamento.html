@@ -1,74 +1,76 @@
-<!doctype html> <!-- Declaração do tipo de documento HTML5 -->
-<html lang="pt-br"> <!-- Define o idioma da página como português -->
+<!doctype html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8"> <!-- Define a codificação de caracteres como UTF-8, padrão para sites modernos -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a largura da página para ser responsiva em dispositivos móveis -->
-    <title>Ultra Imagem</title> <!-- Título da página que aparece na aba do navegador -->
-    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo que estiliza a página -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Imagem</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body> <!-- Início do corpo da página -->
+<body>
 
     <!-- Barra de navegação superior -->
-    <nav class="topnav"> <!-- Elemento de navegação com a classe 'topnav' para aplicar estilos -->
-        <div class="container"> <!-- Container flexível que alinha os itens da barra de navegação -->
-            <a href="pagina_inicial.html" class="logo"> <!-- Link para a página inicial, com a classe 'logo' -->
-                <img src="img/navultraimg.png" width="160" height="40" alt="Imagem da Ultra Imagem"> <!-- Logo da empresa Ultra Imagem -->
+    <nav class="topnav">
+        <div class="container">
+            <a href="pagina_inicial.html" class="logo">
+                <img src="img/navultraimg.png" width="160" height="40" alt="Imagem da Ultra Imagem">
             </a>
-            <ul class="nav-links"> <!-- Lista de links de navegação -->
-                <li><a href="agendamento.html">Agendamento</a></li> <!-- Link para a página de Agendamento -->
-                <li><a href="local.html">Localização</a></li> <!-- Link para a seção de Localização -->
-                <li><a href="sobre.html">Sobre</a></li> <!-- Link para a seção de Sobre-->
-                <li><a href="pagina_inicial.html">Início</a></li> <!-- Link para a seção de Início-->
+            <ul class="nav-links">
+                <li><a href="pagina_inicial.html">Início</a></li>
+                <li><a href="agendamento.html" class="active">Agendamento</a></li>
+                <li><a href="local.html">Localização</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Conteúdo principal -->
-    <main id="main"> <!-- Tag principal que contém o conteúdo central da página -->
-        <section class="form-section"> <!-- Seção que contém o formulário de agendamento, com a classe 'form-section' -->
-            <h2>Agendamento de Consulta</h2> <!-- Título da seção de agendamento -->
-            
-            <!-- Formulário de agendamento -->
-            <form action="" id="formAgendamento"> <!-- Início do formulário, com o atributo 'id' para identificação -->
-                <div class="form-group"> <!-- Grupo de entrada do formulário -->
-                    <label for="nome">Nome Completo:</label> <!-- Rótulo para o campo Nome Completo -->
-                    <input type="text" id="nome" placeholder="Digite seu nome" required> <!-- Campo de texto para o nome -->
+    <main id="main">
+        <section class="form-section">
+            <h2>Agendamento de Consulta</h2>
+            <form action="" id="formAgendamento">
+                
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
                 </div>
-                <div class="form-group"> <!-- Outro grupo de entrada -->
-                    <label for="cpf">CPF:</label> <!-- Rótulo para o campo CPF -->
-                    <input type="text" id="cpf" placeholder="Digite seu CPF" required> <!-- Campo de texto para CPF -->
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+                </div>
+                <div class="form-group">
+                    <label for="num">Celular:</label>
+                    <input type="text" id="num" placeholder="Digite seu número" required>
+                </div>
+                <div class="form-group">
+                    <label>Seu gênero:</label>
+                    <label><input type="radio" id="homem" name="genero" value="homem"> Homem</label>
+                    <label><input type="radio" id="mulher" name="genero" value="mulher"> Mulher</label>
+                </div>
+                <div class="form-group">
+                    <label for="exame">Selecione o exame:</label>
+                    <select name="exame" id="exame" required>
+                        <option value="exame1">Ultrassom Abdômen</option>
+                        <option value="exame2">Ultrassom Obstétrico</option>
+                        <option value="exame3">Ultrassom Doppler</option>
+                        <option value="exame4">Ultrassom de Tireóide</option>
+                    </select>
                 </div>
 
-                <div class="form-group"> <!-- Outro grupo de entrada -->
-                    <label for="num">Número:</label> <!-- Rótulo para o campo Número -->
-                    <input type="text" id="num" placeholder="Digite seu CPF" required> <!-- Campo de texto para Numero -->
-                </div>
-                
-                <!-- Seção para seleção de gênero -->
                 <div class="form-group">
-                    <label>Seu gênero:</label> <!-- Rótulo para a seleção de gênero -->
-                    <label><input type="radio" id="homem" name="genero" value="homem"> Homem</label> <!-- Opção gênero masculino -->
-                    <label><input type="radio" id="mulher" name="genero" value="mulher"> Mulher</label> <!-- Opção gênero feminino -->
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" placeholder="Digite a data" required>
                 </div>
-                <label>Selecione o exame</a>
-                    <select name="exame" required="required">
-                        <option value="exame1">Ultrassom Abdômen</option>
-                        <option value="exam2">Ultrassom Obstétrico</option>
-                        <option value="exam3">Ultrassom Doppler</option>
-                        <option value="exam4">Ultrassom de Tireóide</option>
-                    </select>
-                    <br>
-                    <br>
-                <!-- Botão de envio do formulário -->
                 <div class="form-group">
-                    <input type="submit" value="Enviar" class="btn-submit"> <!-- Botão de envio -->   
+                    <input type="submit" value="Enviar" class="btn-submit">
                 </div>
             </form>
         </section>
     </main>
-<!-- Whatsapp -->
-<a href="http://api.whatsapp.com/send?1=pt_BR&phone=5521994623778" id="link" style="margin-left:94%;">
-    <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-icon-png-image_6315990.png" id="whats-icon" >
-  </a>
+
+    <!-- Whatsapp -->
+    <a href="https://wa.me/5521994623778" target="_blank" class="whatsapp-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
 </body>
 </html>
