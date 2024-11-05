@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Imagem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Barra de navegação superior -->
+    <nav class="topnav">
+        <div class="container">
+            <a href="pagina_inicial.html" class="logo">
+                <img src="img/navultraimg.png" width="160" height="40" alt="Imagem da Ultra Imagem">
+            </a>
+            <ul class="nav-links">
+                <li><a href="pagina_inicial.html">Início</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="consultar_agendamento.html">Consultar Agendamento</a></li>
+                <li><a href="local.html">Localização</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main id="main">
+        <section class="form-section">
+            <h2>Agendamento de Consulta</h2>
+            <form action="processa_agendamento.php" method="POST" id="formAgendamento">
+                
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome "placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required maxlength="14" oninput="handleCPFInput(event)" onblur="getRawCPF(event)">
+                </div>
+                <div class="form-group">
+                    <label for="num">Celular:</label>
+                    <input type="text" id="num" name="num" placeholder="Digite seu número" required maxlength="15" oninput="handleCelularInput(event)" onblur="getRawCelular(event)">
+                </div>                           
+                <div class="form-group">
+                    <label>Seu gênero:</label>
+                    <label><input type="radio" id="Homem"  name="genero" value="Homem" required > Homem</label>
+                    <label><input type="radio" id="Mulher" name="genero" value="Mulher" required> Mulher</label>
+                </div>
+                <div class="form-group">
+                    <label for="exame">Selecione o exame:</label>
+                    <select name="exame" id="exame" required>
+                        <option value="Ultrassom Abdômen">Ultrassom Abdômen</option>
+                        <option value="Ultrassom Obstétrico">Ultrassom Obstétrico</option>
+                        <option value="Ultrassom Doppler">Ultrassom Doppler</option>
+                        <option value="Ultrassom de Tireóide">Ultrassom de Tireóide</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" placeholder="Digite a data" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn-submit">
+                </div>
+            </form>
+            <div id="errorMessages" class="error-messages" style="display: none;"></div>
+        </section>
+    </main>
+
+    <!-- Whatsapp -->
+    <a href="https://wa.me/5521994623778" target="_blank" class="whatsapp-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Agendamento Concluído!  ✔️</h2>
+            <p id="modalMessage"></p>
+            <button class="btn-submit" id="confirmButton">OK</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Ultra Imagem. Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>
