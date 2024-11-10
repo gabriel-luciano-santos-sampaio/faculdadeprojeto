@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Agendamento</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/consultar_agendamento.js" defer></script>
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="container">
+            <a href="pagina_inicial.html" class="logo">
+                <img src="../img/navultraimg.png" width="160" height="40" alt="Imagem da Ultra Imagem">
+            </a>
+            <ul class="nav-links">
+                <li><a href="pagina_inicial.html">Início</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="consultar_agendamento.html" class="active">Consultar Agendamento</a></li>
+                <li><a href="local.html">Localização</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção de Consultar Agendamento -->
+    <section id="main">
+        <div class="form-section">
+            <h2>Consultar Agendamento</h2>
+            <p>Preencha o formulário abaixo para consultar seu agendamento.</p>
+
+            <form id="formConsultar" action="consultar_agendamento.php" method="POST">
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Consultar</button>
+                </div>
+            </form>
+
+            <!-- Exibe mensagem de erro -->
+            <div id="errorMessages" class="error-messages" style="display: none;">
+                <p>Por favor, insira um CPF válido.</p>
+            </div>
+
+            <!-- Resultados da consulta -->
+            <div id="consultaResultados" style="display: none;">
+                <h3>Resultados do Agendamento</h3>
+                <p id="resultadoAgendamento">Aqui serão exibidos os detalhes do agendamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Resultados -->
+<div id="modalResultado" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Resultado da Consulta 🔎</h3>
+        <div id="modalMessage"></div>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Ultra Imagem. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

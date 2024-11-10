@@ -1,0 +1,461 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh; /* Define altura mínima da tela */
+    display: flex;
+    flex-direction: column;
+}
+section {
+    flex: 1;
+}
+
+/* Barra de navegação */
+.topnav {
+    background-color: #004080;
+    padding: 1rem 0;
+}
+.topnav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topnav .logo img {
+    width: 190px;
+    height: 55px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: #0070c0;
+}
+
+.active {
+    background-color: #0070c0;
+}
+
+/* Conteúdo principal */
+#main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+/* Formulário */
+.form-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #004080;
+}
+
+/* Inputs de texto e select */
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo específico para o select */
+.form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f9f9f9;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="none" stroke="%23333" stroke-width=".75" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+}
+
+/* Inputs de radio: corrigido */
+.form-group input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Mantém o alinhamento ao lado do texto */
+}
+
+/* Botões */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #0070c0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: #005fa3;
+}
+/* Seção de Boas-Vindas */
+.welcome-section {
+    background-color: #004080;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #0070c0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #005fa3;
+}
+
+/* Seção sobre Ultrassonografia */
+.introduction {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.introduction h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Seção de Serviços */
+.services {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.services ul {
+    list-style-type: none;
+}
+.services ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+/* Seção sobre */
+.about-section, .services {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Membros da equipe */
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.member {
+    flex: 1;
+    min-width: 220px;
+    background-color: #f9f9f9;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.member h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.gmaps {
+    width: 100%; /* O iframe ocupará 80% da largura da tela */
+    height: 0;
+    padding-bottom: 45%; /* Proporção de altura para manter a tela responsiva */
+    position: relative;
+    margin: 0 auto; /* Centraliza horizontalmente o iframe */
+}
+
+.gmaps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.endereco {
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.ultrasound-image {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Ícone de calendário padrão */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Quando o input é focado */
+input[type="date"]:focus {
+    border-color: #0070c0;
+    outline: none;
+}
+
+/* Personalizando placeholder */
+input[type="date"]::placeholder {
+    color: #aaa;
+}
+
+/* Membros da equipe */
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Adiciona espaço entre os membros */
+}
+
+.member {
+    flex: 1;
+    min-width: 220px;
+    max-width: 250px; /* Define um limite máximo para os membros */
+    background-color: #f9f9f9;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.member img {
+    width: 100%; /* Ocupará 100% da largura do contêiner */
+    height: auto;
+    border-radius: 50%; /* Tornar a imagem circular */
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Layout responsivo para membros da equipe */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member {
+        max-width: 100%;
+    }
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica sobre a tela */
+    z-index: 1000; /* Acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Centraliza na tela */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalMessage {
+    margin: 20px 0;
+    color: #333;
+}
+.error-messages {
+    background-color: #ffcccc; /* Fundo vermelho claro */
+    color: #c70000; /* Texto vermelho escuro */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #c70000; /* Borda vermelha */
+    display: none; /* Escondido por padrão */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica sobre a tela */
+    z-index: 1000; /* Acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Centraliza na tela */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalMessage {
+    margin: 20px 0;
+    color: #333;
+}
